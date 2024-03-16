@@ -3,13 +3,27 @@ import './Sidebar.css'
 import { Avatar } from '@mui/material'
 
 function Sidebar() {
+
+    const recentItem = (topic) => {
+        return (
+            <div className="sidebar_recentItem">
+                <span className="sidebar_hash">#</span>
+                <p>{topic}</p>
+            </div>
+        )
+    }
+
     return (
         <div className='sidebar'>
             <div className="sidebar_top">
-                <img src='https://img.freepik.com/free-vector/bokeh-defocused-background_23-2148497833.jpg' alt='' />
-                <Avatar className='sidebar_avatar' />
+                <img
+                    src="https://images.unsplash.com/photo-1549778399-f94fd24d4697?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt=''
+                />
+                <Avatar className="sidebar_avatar" />
                 <h2>Nurzhan Makanov</h2>
                 <h4>makanov76@gmail.com</h4>
+
             </div>
             <div className="sidebar_stats">
                 <div className="sidebar_stat">
@@ -23,6 +37,12 @@ function Sidebar() {
             </div>
             <div className="sidebar_bottom">
                 <p>Recent</p>
+                {recentItem('reactjs')}
+                {recentItem('nextjs')}
+                {recentItem('softwareengineering')}
+                {recentItem('firebase')}
+                {recentItem('python')}
+                {recentItem('django')}
             </div>
         </div>
     )
